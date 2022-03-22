@@ -31,6 +31,6 @@ public class Figure
 
     private void InstallRank(GameObject _gameObject, int _rank)
     {
-        _gameObject.GetComponent<FigureRank>()?.SetRank(_rank);
+        _gameObject.GetComponent<FigureRank>().SetRank(_rank);
     }
 }

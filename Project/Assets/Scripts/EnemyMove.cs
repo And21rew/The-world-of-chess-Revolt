@@ -5,19 +5,28 @@ using UnityEngine;
 public class EnemyMove : FigureMove
 {
     [SerializeField] private GameObject player;
+    private bool checkPlayerLive = true;
 
     private void Update()
     {
-        this.Move(speed);
+        if (checkPlayerLive)
+            this.Move(speed);
     }
 
     public override void Move(float _speed)
     {
-        var distanceToPlayer = CalculateDistance();
-
-        if (distanceToPlayer <= 8f)
+        if (player != null) 
         {
-            this.transform.position += (player.transform.position - this.transform.position).normalized * _speed * Time.deltaTime;
+            var distanceToPlayer = CalculateDistance();
+
+            if (distanceToPlayer <= 8f)
+            {
+                this.transform.position += (player.transform.position - this.transform.position).normalized * _speed * Time.deltaTime;
+            }
+        }
+        else
+        {
+            checkPlayerLive = false;
         }
     }
 

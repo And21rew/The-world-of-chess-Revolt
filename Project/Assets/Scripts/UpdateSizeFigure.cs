@@ -5,18 +5,25 @@ using UnityEngine;
 
 public class UpdateSizeFigure : MonoBehaviour
 {
-    public static void UpdateSize(float _enemySize)
+    public static void UpdateSize(GameObject _player, float _enemySize)
     {
-        float addPart = 0.01f;
+        var newScale = CalculateNewScale(_player, _enemySize);
+        _player.GetComponent<Transform>().localScale = newScale;
+    }
+
+    private static Vector3 CalculateNewScale(GameObject _player, float _enemySize)
+    {
+        float addPart;
 
         if (_enemySize == 1)
-        {
-            Debug.Log(addPart);
-        }
+            addPart = 0.01f;
         else
-        {
             addPart = (float)Math.Round(_enemySize % (int)_enemySize / 10f, 2);
-            Debug.Log(addPart);
-        }
+
+        var newScaleX = _player.GetComponent<Transform>().localScale.x + addPart;
+        var newScaleY = _player.GetComponent<Transform>().localScale.y + addPart;
+        var newScaleZ = _player.GetComponent<Transform>().localScale.z + addPart;
+
+        return new Vector3(newScaleX, newScaleY, newScaleZ);
     }
 }
