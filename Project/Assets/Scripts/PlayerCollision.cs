@@ -17,8 +17,10 @@ public class PlayerCollision : FigureRank
             if ((playerSize >= enemySize) && (playerRank >= enemyRank))
             {
                 Destroy(collision.gameObject);
+
+                UpdateSizeFigure.UpdateSize(enemySize);
                 ///
-                /// Функция обновления счета
+                /// Функция обновления счета и размера
                 ///
             }
             else

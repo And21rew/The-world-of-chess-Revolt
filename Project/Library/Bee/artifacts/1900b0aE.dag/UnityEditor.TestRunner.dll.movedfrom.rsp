@@ -78,6 +78,9 @@ Library\Bee\artifacts\movedfrom\UnityEngine.VRModule.dll_12642130392942922784.mo
 Library\Bee\artifacts\movedfrom\UnityEngine.WindModule.dll_7402245736825045308.movedfrom
 Library\Bee\artifacts\movedfrom\UnityEngine.XRModule.dll_16298704764663929214.movedfrom
 Library\Bee\artifacts\movedfrom\UnityEditor.Android.Extensions.dll_2522008157173988304.movedfrom
+Library\Bee\artifacts\movedfrom\UnityEditor.iOS.Extensions.Common.dll_17749515962469697069.movedfrom
+Library\Bee\artifacts\movedfrom\UnityEditor.iOS.Extensions.dll_13587872217118639528.movedfrom
+Library\Bee\artifacts\movedfrom\UnityEditor.iOS.Extensions.Xcode.dll_17409197369201100143.movedfrom
 Library\Bee\artifacts\movedfrom\UnityEditor.UWP.Extensions.dll_13832896135880297763.movedfrom
 Library\Bee\artifacts\movedfrom\UnityEditor.WebGL.Extensions.dll_4217380136682620296.movedfrom
 Library\Bee\artifacts\movedfrom\UnityEditor.WindowsStandalone.Extensions.dll_1326230419694156920.movedfrom
