@@ -14,7 +14,7 @@ public class PlayerMove : FigureMove
         _rigidbody.gravityScale = 0f;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         this.Move(speed);
     }

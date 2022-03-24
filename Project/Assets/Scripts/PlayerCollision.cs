@@ -5,10 +5,12 @@ using UnityEngine;
 public class PlayerCollision : FigureRank
 {
     private GameManager gameManager;
+    private Score score;
 
     private void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        score = GameObject.Find("Score").GetComponent<Score>();
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -25,18 +27,13 @@ public class PlayerCollision : FigureRank
             {
                 Destroy(collision.gameObject);
 
-                UpdateSizeFigure.UpdateSize(this.gameObject, enemySize);
-                ///
-                /// Функция обновления счета
-                ///
+                PlayerSize.UpdateSize(this.gameObject, enemySize);
+                score.UpdateScore(collision.gameObject);
             }
             else
             {
                 Destroy(this.gameObject);
                 gameManager.LoseGame();
-                ///
-                /// Функция проигрыша
-                ///
             }
         }
     }

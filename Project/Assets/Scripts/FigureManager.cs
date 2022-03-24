@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class FigureManager : MonoBehaviour
 {
-    [SerializeField] private float size;
+    //[SerializeField] 
+    public float size;
     [SerializeField] private float speed;
     [SerializeField] private int rank;
 
@@ -13,7 +14,7 @@ public class FigureManager : MonoBehaviour
         InstallFeatures(size, speed, rank);
     }
 
-    private void InstallFeatures(float _size, float _speed, int _rank)
+    protected void InstallFeatures(float _size, float _speed, int _rank)
     {
         Figure figure = new Figure(this.gameObject, _size, _speed, _rank);
     }

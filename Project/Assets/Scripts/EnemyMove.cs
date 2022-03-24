@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class EnemyMove : FigureMove
 {
-    [SerializeField] private GameObject player;
-    private bool checkPlayerLive = true;
+    private GameObject player;
+
+    private void Start()
+    {
+        player = GameObject.Find("Player");
+    }
 
     private void Update()
     {
-        if (checkPlayerLive)
-            this.Move(speed);
+        this.Move(speed);
     }
 
     public override void Move(float _speed)
@@ -23,10 +26,6 @@ public class EnemyMove : FigureMove
             {
                 this.transform.position += (player.transform.position - this.transform.position).normalized * _speed * Time.deltaTime;
             }
-        }
-        else
-        {
-            checkPlayerLive = false;
         }
     }
 
