@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class FigureManager : MonoBehaviour
 {
-    //[SerializeField] 
-    public float size;
+    [SerializeField] private float size;
     [SerializeField] private float speed;
     [SerializeField] private int rank;
 
+    public bool fromSpawner = false;
+
     private void Start()
     {
-        InstallFeatures(size, speed, rank);
+        if (!fromSpawner)
+            InstallFeatures(size, speed, rank);
     }
 
     protected void InstallFeatures(float _size, float _speed, int _rank)

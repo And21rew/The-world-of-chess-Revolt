@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8617893735079421417}
   - component: {fileID: 8617893735079421416}
   - component: {fileID: 8617893735079421415}
+  - component: {fileID: 306180539898084370}
   m_Layer: 0
   m_Name: 3_WhiteBishop
   m_TagString: Enemy
@@ -172,5 +173,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb20bb47111d39047a79f2bd0ca57ed7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &306180539898084370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8617893735079421414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ed379f5c468a34dbe076e72bcc9dd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

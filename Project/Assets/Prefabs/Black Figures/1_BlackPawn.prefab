@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7110266955697874834}
   - component: {fileID: 7110266955697874833}
   - component: {fileID: 7110266955697874832}
+  - component: {fileID: 4928271078350056514}
   m_Layer: 0
   m_Name: 1_BlackPawn
   m_TagString: Enemy
@@ -147,9 +148,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19200d740542e304dbbfe3aa9fa203bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 0.9
+  size: 1
   speed: 1.5
   rank: 1
+  fromSpawner: 1
 --- !u!114 &7110266955697874833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,5 +174,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb20bb47111d39047a79f2bd0ca57ed7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4928271078350056514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7110266955697874839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ed379f5c468a34dbe076e72bcc9dd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

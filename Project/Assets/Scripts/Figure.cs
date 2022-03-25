@@ -21,7 +21,7 @@ public class Figure
 
     private void InstallSize(GameObject _gameObject, float _size)
     {
-        _gameObject.transform.localScale = new Vector3(_size, _size, _size);
+        _gameObject.GetComponent<FigureSize>().SetSize(_gameObject, _size);
     }
 
     private void InstallSpeed(GameObject _gameObject, float _speed)

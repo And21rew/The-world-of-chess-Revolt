@@ -8,7 +8,7 @@ public enum EnemysColor
     Black
 }
 
-public class EnemySpawner : FigureManager
+public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] whiteEnemys, blackEnemys;
 
@@ -20,7 +20,6 @@ public class EnemySpawner : FigureManager
     private int enemyColor;
 
     private float playerSize;
-    private float _size;
 
     private void Start()
     {
@@ -42,11 +41,9 @@ public class EnemySpawner : FigureManager
     private void Spawn(int _playerRank, float _playerSize)
     {
         var _enemy = SelectEnemy(_playerRank);
-        _size = SelectSizeEnemy();
-        //_enemy.GetComponent<Transform>().localScale = size;
-
-        _enemy.GetComponent<FigureManager>().size = _size;
-
+        var _size = SelectSizeEnemy();
+        _enemy.GetComponent<FigureManager>().fromSpawner = true;
+        _enemy.GetComponent<FigureSize>().SetSize(_enemy, _size);
         Instantiate(_enemy, transform.position, transform.rotation);
     }
 

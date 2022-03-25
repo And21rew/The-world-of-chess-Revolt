@@ -213,6 +213,10 @@ PrefabInstance:
       propertyPath: size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7110266955697874834, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
+      propertyPath: fromSpawner
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7110266955697874835, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
       propertyPath: m_BodyType
       value: 0
@@ -293,6 +297,10 @@ PrefabInstance:
     - target: {fileID: 7110266955697874834, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
       propertyPath: size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110266955697874834, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
+      propertyPath: fromSpawner
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7110266955697874835, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
       propertyPath: m_BodyType
@@ -430,6 +438,10 @@ PrefabInstance:
       propertyPath: size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 915766597055633920, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
+      propertyPath: fromSpawner
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 915766597055633921, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
       propertyPath: player
       value: 
@@ -510,6 +522,10 @@ PrefabInstance:
     - target: {fileID: 915766597055633920, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
       propertyPath: size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 915766597055633920, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
+      propertyPath: fromSpawner
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 915766597055633921, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
       propertyPath: player
@@ -595,6 +611,10 @@ PrefabInstance:
     - target: {fileID: 7110266955697874834, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
       propertyPath: size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110266955697874834, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
+      propertyPath: fromSpawner
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7110266955697874835, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
       propertyPath: m_BodyType
@@ -752,6 +772,10 @@ PrefabInstance:
       propertyPath: size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 915766597055633920, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
+      propertyPath: fromSpawner
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 915766597055633921, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
       propertyPath: player
       value: 
@@ -837,6 +861,10 @@ PrefabInstance:
     - target: {fileID: 915766597055633920, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
       propertyPath: size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 915766597055633920, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
+      propertyPath: fromSpawner
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 915766597055633921, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
       propertyPath: player
@@ -927,6 +955,10 @@ PrefabInstance:
     - target: {fileID: 7110266955697874834, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
       propertyPath: size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110266955697874834, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
+      propertyPath: fromSpawner
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7110266955697874835, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
       propertyPath: m_BodyType
@@ -1116,6 +1148,10 @@ PrefabInstance:
       propertyPath: size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7110266955697874834, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
+      propertyPath: fromSpawner
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7110266955697874835, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
       propertyPath: m_BodyType
       value: 0
@@ -1201,6 +1237,10 @@ PrefabInstance:
     - target: {fileID: 7110266955697874834, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
       propertyPath: size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110266955697874834, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
+      propertyPath: fromSpawner
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7110266955697874835, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
       propertyPath: m_BodyType
@@ -1340,6 +1380,10 @@ PrefabInstance:
     - target: {fileID: 915766597055633920, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
       propertyPath: size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 915766597055633920, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
+      propertyPath: fromSpawner
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 915766597055633921, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
       propertyPath: player
@@ -1586,6 +1630,10 @@ PrefabInstance:
     - target: {fileID: 915766597055633920, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
       propertyPath: size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 915766597055633920, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
+      propertyPath: fromSpawner
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 915766597055633921, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
       propertyPath: player
@@ -1847,6 +1895,10 @@ PrefabInstance:
       propertyPath: size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 915766597055633920, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
+      propertyPath: fromSpawner
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 915766597055633921, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
       propertyPath: player
       value: 
@@ -1932,6 +1984,10 @@ PrefabInstance:
     - target: {fileID: 915766597055633920, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
       propertyPath: size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 915766597055633920, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
+      propertyPath: fromSpawner
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 915766597055633921, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
       propertyPath: player
@@ -2077,6 +2133,10 @@ PrefabInstance:
       propertyPath: size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7110266955697874834, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
+      propertyPath: fromSpawner
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7110266955697874835, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
       propertyPath: m_BodyType
       value: 0
@@ -2163,6 +2223,10 @@ PrefabInstance:
       propertyPath: size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7110266955697874834, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
+      propertyPath: fromSpawner
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7110266955697874835, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
       propertyPath: m_BodyType
       value: 0
@@ -2244,6 +2308,10 @@ PrefabInstance:
     - target: {fileID: 915766597055633920, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
       propertyPath: size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 915766597055633920, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
+      propertyPath: fromSpawner
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 915766597055633921, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
       propertyPath: player
@@ -2335,6 +2403,10 @@ PrefabInstance:
       propertyPath: size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7110266955697874834, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
+      propertyPath: fromSpawner
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7110266955697874835, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
       propertyPath: m_BodyType
       value: 0
@@ -2420,6 +2492,10 @@ PrefabInstance:
     - target: {fileID: 7110266955697874834, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
       propertyPath: size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110266955697874834, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
+      propertyPath: fromSpawner
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7110266955697874835, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
       propertyPath: m_BodyType
@@ -2523,6 +2599,10 @@ PrefabInstance:
       propertyPath: size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 915766597055633920, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
+      propertyPath: fromSpawner
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 915766597055633921, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
       propertyPath: player
       value: 
@@ -2608,6 +2688,10 @@ PrefabInstance:
       propertyPath: size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7110266955697874834, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
+      propertyPath: fromSpawner
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7110266955697874835, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
       propertyPath: m_BodyType
       value: 0
@@ -2690,6 +2774,7 @@ GameObject:
   - component: {fileID: 1904217367}
   - component: {fileID: 1904217368}
   - component: {fileID: 1904217361}
+  - component: {fileID: 1904217369}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2712,6 +2797,7 @@ MonoBehaviour:
   size: 1
   speed: 3
   rank: 1
+  fromSpawner: 0
 --- !u!50 &1904217362
 Rigidbody2D:
   serializedVersion: 4
@@ -2861,6 +2947,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb20bb47111d39047a79f2bd0ca57ed7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1904217369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904217360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ed379f5c468a34dbe076e72bcc9dd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1906690260 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 915766597055633924, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
@@ -2881,6 +2979,10 @@ PrefabInstance:
     - target: {fileID: 915766597055633920, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
       propertyPath: size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 915766597055633920, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
+      propertyPath: fromSpawner
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 915766597055633921, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
       propertyPath: player
@@ -3012,6 +3114,10 @@ PrefabInstance:
     - target: {fileID: 915766597055633920, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
       propertyPath: size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 915766597055633920, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
+      propertyPath: fromSpawner
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 915766597055633921, guid: ce06aef24cc6c554db062fcd75943377, type: 3}
       propertyPath: player
@@ -3211,6 +3317,10 @@ PrefabInstance:
     - target: {fileID: 7110266955697874834, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
       propertyPath: size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7110266955697874834, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
+      propertyPath: fromSpawner
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7110266955697874835, guid: 3ba1bd8bb030ce946a06d5ee3702a39f, type: 3}
       propertyPath: m_BodyType

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 9146844381800207332}
   - component: {fileID: 9146844381800207131}
   - component: {fileID: 9146844381800207130}
+  - component: {fileID: -5218902557201913931}
   m_Layer: 0
   m_Name: 3_BlackBishop
   m_TagString: Enemy
@@ -172,5 +173,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb20bb47111d39047a79f2bd0ca57ed7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-5218902557201913931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9146844381800207129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ed379f5c468a34dbe076e72bcc9dd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

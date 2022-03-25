@@ -349,6 +349,7 @@
 "Assets/Scripts/FigureManager.cs"
 "Assets/Scripts/FigureMove.cs"
 "Assets/Scripts/FigureRank.cs"
+"Assets/Scripts/FigureSize.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/PlayerCollision.cs"
 "Assets/Scripts/PlayerMove.cs"
