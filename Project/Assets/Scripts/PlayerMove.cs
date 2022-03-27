@@ -16,12 +16,12 @@ public class PlayerMove : FigureMove
 
     private void FixedUpdate()
     {
-        this.Move(speed);
+        this.Move();
     }
 
-    public override void Move(float _speed)
+    public override void Move()
     {
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
-            _rigidbody.velocity = new Vector2(Input.GetAxis("Horizontal") * _speed, Input.GetAxis("Vertical") * _speed);
+            _rigidbody.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Vertical") * speed);
     }
 }

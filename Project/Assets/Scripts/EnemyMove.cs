@@ -8,15 +8,15 @@ public class EnemyMove : FigureMove
 
     private void Start()
     {
-        player = GameObject.Find("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void Update()
     {
-        this.Move(speed);
+        this.Move();
     }
 
-    public override void Move(float _speed)
+    public override void Move()
     {
         if (player != null) 
         {
@@ -24,7 +24,7 @@ public class EnemyMove : FigureMove
 
             if (distanceToPlayer <= 8f)
             {
-                this.transform.position += (player.transform.position - this.transform.position).normalized * _speed * Time.deltaTime;
+                this.transform.position += speed * Time.deltaTime * (player.transform.position - this.transform.position).normalized;
             }
         }
     }

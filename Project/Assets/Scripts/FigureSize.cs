@@ -8,7 +8,7 @@ public class FigureSize : MonoBehaviour
 
     public void SetSize(GameObject _gameObject, float _size)
     {
-        this.size = _size;
+        size = _size;
         _gameObject.transform.localScale = new Vector3(_size, _size, _size);
     }
 

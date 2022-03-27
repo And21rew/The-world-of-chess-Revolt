@@ -4,20 +4,37 @@ using UnityEngine;
 
 public class FigureManager : MonoBehaviour
 {
-    [SerializeField] private float size;
-    [SerializeField] private float speed;
-    [SerializeField] private int rank;
+    [SerializeField] protected float size;
+    [SerializeField] protected float speed;
+    [SerializeField] protected int rank;
 
     public bool fromSpawner = false;
 
     private void Start()
     {
-        if (!fromSpawner)
-            InstallFeatures(size, speed, rank);
+        var spawner = GameObject.FindGameObjectWithTag("Spawner");
+
+        if (fromSpawner)
+        {
+            size = spawner.GetComponent<EnemySpawner>().SelectSizeEnemy();
+            //speed = spawner.GetComponent<EnemySpawner>().SelectSpeedEnemy();
+        }
+
+        InstallFeatures(this.gameObject, size, speed, rank);
     }
 
-    protected void InstallFeatures(float _size, float _speed, int _rank)
+    protected void InstallFeatures(GameObject _gameObject, float _size, float _speed, int _rank)
     {
-        Figure figure = new Figure(this.gameObject, _size, _speed, _rank);
+        Figure figure = new Figure(_gameObject, _size, _speed, _rank);
+    }
+
+    public float GetSpeed()
+    {
+        return speed;
+    }
+
+    public int GetRank()
+    {
+        return rank;
     }
 }

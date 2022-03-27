@@ -17,17 +17,17 @@ public class PlayerCollision : FigureRank
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            var playerSize = this.transform.localScale.x;
-            var enemySize = collision.transform.localScale.x;
+            float playerSize = this.gameObject.GetComponent<FigureSize>().GetSize();
+            float enemySize = collision.gameObject.GetComponent<FigureSize>().GetSize();
 
-            var playerRank = this.rank;
-            var enemyRank = collision.gameObject.GetComponent<FigureRank>().GetRank();
+            int playerRank = this.rank;
+            int enemyRank = collision.gameObject.GetComponent<FigureRank>().GetRank();
 
             if ((playerSize >= enemySize) && (playerRank >= enemyRank))
             {
                 Destroy(collision.gameObject);
 
-                PlayerSize.UpdateSize(this.gameObject, enemySize);
+                this.gameObject.GetComponent<PlayerSize>().UpdateSize(enemySize);
                 score.UpdateScore(collision.gameObject);
             }
             else

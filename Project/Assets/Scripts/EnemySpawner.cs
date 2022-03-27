@@ -33,17 +33,16 @@ public class EnemySpawner : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(timeBetweenSpawn);
-            playerSize = player.GetComponent<Transform>().localScale.x;
-            Spawn(_playerRank, playerSize);
+            playerSize = player.GetComponent<FigureSize>().GetSize();
+            Spawn(_playerRank);
         }
     }
 
-    private void Spawn(int _playerRank, float _playerSize)
+    private void Spawn(int _playerRank)
     {
         var _enemy = SelectEnemy(_playerRank);
-        var _size = SelectSizeEnemy();
         _enemy.GetComponent<FigureManager>().fromSpawner = true;
-        _enemy.GetComponent<FigureSize>().SetSize(_enemy, _size);
+
         Instantiate(_enemy, transform.position, transform.rotation);
     }
 
@@ -57,7 +56,7 @@ public class EnemySpawner : MonoBehaviour
             return blackEnemys[_playerRank];
     }
 
-    private float SelectSizeEnemy()
+    public float SelectSizeEnemy()
     {
         var firstOption = playerSize - 0.1f;
         var secondOption = playerSize;

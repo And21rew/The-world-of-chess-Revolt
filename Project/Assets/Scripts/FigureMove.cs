@@ -8,8 +8,8 @@ public class FigureMove : MonoBehaviour
 
     public void SetSpeed(float _speed)
     {
-        this.speed = _speed;
+        speed = _speed;
     }
 
-    public virtual void Move(float _speed) { }
+    public virtual void Move() { }
 }

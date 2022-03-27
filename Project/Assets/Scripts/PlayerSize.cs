@@ -5,27 +5,22 @@ using UnityEngine;
 
 public class PlayerSize : MonoBehaviour
 {
-    public static void UpdateSize(GameObject _player, float _enemySize)
+    public void UpdateSize(float _enemySize)
     {
-        if (_player.transform.localScale.x < 3f)
-        {
-            var newScale = CalculateNewScale(_player, _enemySize);
-            _player.GetComponent<Transform>().localScale = newScale;
-        }
+        var newScale = CalculateNewScale(_enemySize);
+        this.gameObject.GetComponent<FigureSize>().SetSize(this.gameObject, newScale.x);
     }
 
-    private static Vector3 CalculateNewScale(GameObject _player, float _enemySize)
+    private Vector3 CalculateNewScale(float _enemySize)
     {
-        float addPart;
+        float addPart = 0.01f;
 
-        if (_enemySize == 1)
-            addPart = 0.01f;
-        else
+        if (_enemySize > 1)
             addPart = (float)Math.Round(_enemySize % (int)_enemySize / 10f, 2);
 
-        var newScaleX = _player.GetComponent<Transform>().localScale.x + addPart;
-        var newScaleY = _player.GetComponent<Transform>().localScale.y + addPart;
-        var newScaleZ = _player.GetComponent<Transform>().localScale.z + addPart;
+        var newScaleX = this.gameObject.GetComponent<Transform>().localScale.x + addPart;
+        var newScaleY = this.gameObject.GetComponent<Transform>().localScale.y + addPart;
+        var newScaleZ = this.gameObject.GetComponent<Transform>().localScale.z + addPart;
 
         return new Vector3(newScaleX, newScaleY, newScaleZ);
     }

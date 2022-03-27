@@ -14,23 +14,23 @@ public class Figure
         this.speed = _speed;
         this.rank = _rank;
 
-        InstallSize(_gameObject, size);
-        InstallSpeed(_gameObject, speed);
-        InstallRank(_gameObject, rank);
+        InstallSize(_gameObject);
+        InstallSpeed(_gameObject);
+        InstallRank(_gameObject);
     }
 
-    private void InstallSize(GameObject _gameObject, float _size)
+    private void InstallSize(GameObject _gameObject)
     {
-        _gameObject.GetComponent<FigureSize>().SetSize(_gameObject, _size);
+        _gameObject.GetComponent<FigureSize>().SetSize(_gameObject, size);
     }
 
-    private void InstallSpeed(GameObject _gameObject, float _speed)
+    private void InstallSpeed(GameObject _gameObject)
     {
-        _gameObject.GetComponent<FigureMove>().SetSpeed(_speed);
+        _gameObject.GetComponent<FigureMove>().SetSpeed(speed);
     }
 
-    private void InstallRank(GameObject _gameObject, int _rank)
+    private void InstallRank(GameObject _gameObject)
     {
-        _gameObject.GetComponent<FigureRank>().SetRank(_rank);
+        _gameObject.GetComponent<FigureRank>().SetRank(rank);
     }
 }
