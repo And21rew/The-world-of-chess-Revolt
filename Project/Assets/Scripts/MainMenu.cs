@@ -7,6 +7,73 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject levelsScreen, settingsScreen;
+    [SerializeField] private Sprite[] playerFigures;
+
+    [SerializeField] private GameObject playerFigure;
+    [SerializeField] private Text scoreText;
+
+    [SerializeField] private GameObject updateScreen;
+    [SerializeField] private GameObject[] levelBlocks;
+
+    private int scoreToUpdateRank;
+
+    private void Start()
+    {
+        SetPlayerFigure();
+        SetScore();
+
+        for (int i = 0; i < levelBlocks.Length; i++)
+        {
+            Debug.Log(PlayerPrefs.GetInt("block" + (i + 2).ToString()));
+
+            if (PlayerPrefs.GetInt("block" + (i + 2).ToString()) == 1)
+            {
+                levelBlocks[i].SetActive(false);
+            }
+        }
+    }
+
+    private void SetPlayerFigure()
+    {
+        var playerRank = PlayerPrefs.GetInt("PlayerRank");
+        playerFigure.GetComponent<Image>().sprite = playerFigures[playerRank - 1];
+    }
+
+    private void SetScore()
+    {
+        scoreToUpdateRank = 10 * PlayerPrefs.GetInt("PlayerRank");
+
+        var globalScore = PlayerPrefs.GetInt("Score");
+        scoreText.text = globalScore.ToString() + "/" + scoreToUpdateRank.ToString();
+
+        if (globalScore >= scoreToUpdateRank)
+            updateScreen.SetActive(true);
+    }
+
+    public void UnlockLevel()
+    {
+        var globalScore = PlayerPrefs.GetInt("Score");
+        globalScore -= scoreToUpdateRank;
+        PlayerPrefs.SetInt("Score", globalScore);
+
+        var playerRank = PlayerPrefs.GetInt("PlayerRank");
+        playerRank += 1;
+        PlayerPrefs.SetInt("PlayerRank", playerRank);
+
+        SetPlayerFigure();
+        SetScore();
+
+        for (int i = 0; i < levelBlocks.Length; i++)
+        {
+            if (levelBlocks[i].activeInHierarchy)
+            {
+                PlayerPrefs.SetInt("block" + (i + 2).ToString(), 1);
+                levelBlocks[i].SetActive(false);
+            }
+        }
+
+        updateScreen.SetActive(false);
+    }
 
     public void SwitchLevelsScreen()
     {
@@ -27,11 +94,6 @@ public class MainMenu : MonoBehaviour
     public void EnterInLevel(int index)
     {
         SceneManager.LoadScene(index);
-    }
-
-    public void BackToMenu()
-    {
-        SceneManager.LoadScene(0);
     }
 
     public void CloseGame()

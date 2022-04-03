@@ -9,6 +9,7 @@ public class FigureManager : MonoBehaviour
     [SerializeField] protected int rank;
 
     public bool fromSpawner = false;
+    public bool isPlayer = false;
 
     private void Start()
     {
@@ -18,6 +19,13 @@ public class FigureManager : MonoBehaviour
         {
             size = spawner.GetComponent<EnemySpawner>().SelectSizeEnemy();
             //speed = spawner.GetComponent<EnemySpawner>().SelectSpeedEnemy();
+        }
+
+        if (isPlayer)
+        {
+            var playerRank = PlayerPrefs.GetInt("PlayerRank");
+            rank = playerRank;
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = this.gameObject.GetComponent<PlayerRank>().playerFigures[playerRank - 1];
         }
 
         InstallFeatures(this.gameObject, size, speed, rank);

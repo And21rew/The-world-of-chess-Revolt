@@ -6,10 +6,11 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     [SerializeField] private Text scoreText;
-    private int score = 0;
+    private static int score;
 
     private void Start()
     {
+        score = 0;
         UpdateUI();
     }
 
@@ -17,6 +18,11 @@ public class Score : MonoBehaviour
     {
         score += _enemy.GetComponent<FigureRank>().GetRank();
         UpdateUI();
+    }
+
+    public static int GetScore()
+    {
+        return score;
     }
 
     private void UpdateUI()
