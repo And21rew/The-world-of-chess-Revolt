@@ -13,7 +13,9 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Text scoreText;
 
     [SerializeField] private GameObject updateScreen;
-    [SerializeField] private GameObject[] levelBlocks;
+
+    [SerializeField] private Button[] levelButtons;
+    [SerializeField] private GameObject[] levelComplete;
 
     private int scoreToUpdateRank;
 
@@ -21,13 +23,32 @@ public class MainMenu : MonoBehaviour
     {
         SetPlayerFigure();
         SetScore();
+        UpdateButtons();
+    }
+
+    private void UpdateButtons()
+    {
+        var playerRank = PlayerPrefs.GetInt("PlayerRank") - 1;
+        //levelButtons[playerRank].interactable = true;
+
+        foreach (var e in levelButtons)
+        {
+            e.interactable = false;
+        }
+
+        levelButtons[playerRank].interactable = true;
 
         /*
-        for (int i = 0; i < levelBlocks.Length; i++)
+        for (int i = 0; i < playerRank; i++)
         {
-            if (PlayerPrefs.GetInt("block" + (i + 2).ToString()) == 1)
+            if (PlayerPrefs.GetInt("block" + playerRank + "level") == 0)
             {
-                levelBlocks[i].SetActive(false);
+                levelButtons[i].interactable = true;
+                levelComplete[i].SetActive(true);
+            }
+            else
+            {
+                levelButtons[i].interactable = false;
             }
         }
         */
@@ -35,8 +56,8 @@ public class MainMenu : MonoBehaviour
 
     private void SetPlayerFigure()
     {
-        var playerRank = PlayerPrefs.GetInt("PlayerRank");
-        playerFigure.GetComponent<Image>().sprite = playerFigures[playerRank - 1];
+        var playerRank = PlayerPrefs.GetInt("PlayerRank") - 1;
+        playerFigure.GetComponent<Image>().sprite = playerFigures[playerRank];
     }
 
     private void SetScore()
@@ -62,17 +83,7 @@ public class MainMenu : MonoBehaviour
 
         SetPlayerFigure();
         SetScore();
-
-        /*
-        for (int i = 0; i < levelBlocks.Length; i++)
-        {
-            if (levelBlocks[i].activeInHierarchy)
-            {
-                PlayerPrefs.SetInt("block" + (i + 2).ToString(), 1);
-                levelBlocks[i].SetActive(false);
-            }
-        }
-        */
+        UpdateButtons();
 
         updateScreen.SetActive(false);
     }

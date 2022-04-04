@@ -26,26 +26,29 @@ public class FirstStart : MonoBehaviour
             PlayerPrefs.SetInt("PlayerRank", 1);
         }
 
-        /*
-        if (!PlayerPrefs.HasKey("block2"))
+        if (!PlayerPrefs.HasKey("block1level"))
         {
-            PlayerPrefs.SetInt("block2", 0);
+            PlayerPrefs.SetInt("block1level", 0);
+        }
+        
+        if (!PlayerPrefs.HasKey("block2level"))
+        {
+            PlayerPrefs.SetInt("block2level", 1);
         }
 
-        if (!PlayerPrefs.HasKey("block3"))
+        if (!PlayerPrefs.HasKey("block3level"))
         {
-            PlayerPrefs.SetInt("block3", 0);
+            PlayerPrefs.SetInt("block3level", 1);
         }
 
-        if (!PlayerPrefs.HasKey("block4"))
+        if (!PlayerPrefs.HasKey("block4level"))
         {
-            PlayerPrefs.SetInt("block4", 0);
+            PlayerPrefs.SetInt("block4level", 1);
         }
 
-        if (!PlayerPrefs.HasKey("block5"))
+        if (!PlayerPrefs.HasKey("block5level"))
         {
-            PlayerPrefs.SetInt("block5", 0);
+            PlayerPrefs.SetInt("block5level", 1);
         }
-        */
     }
 }

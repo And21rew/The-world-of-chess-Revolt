@@ -23,7 +23,7 @@ public class PlayerCollision : FigureRank
             int playerRank = this.rank;
             int enemyRank = collision.gameObject.GetComponent<FigureRank>().GetRank();
 
-            if ((playerRank >= enemyRank) || ((playerSize >= enemySize) && (playerRank >= enemyRank)))
+            if ((playerRank > enemyRank) || ((playerSize >= enemySize) && (playerRank >= enemyRank)))
             {
                 Destroy(collision.gameObject);
 
