@@ -29,29 +29,18 @@ public class MainMenu : MonoBehaviour
     private void UpdateButtons()
     {
         var playerRank = PlayerPrefs.GetInt("PlayerRank") - 1;
-        //levelButtons[playerRank].interactable = true;
 
-        foreach (var e in levelButtons)
+        for (int i = 0; i < levelButtons.Length; i++)
         {
-            e.interactable = false;
+            levelButtons[i].interactable = false;
+
+            if (i < playerRank)
+            {
+                levelComplete[i].SetActive(true);
+            }
         }
 
         levelButtons[playerRank].interactable = true;
-
-        /*
-        for (int i = 0; i < playerRank; i++)
-        {
-            if (PlayerPrefs.GetInt("block" + playerRank + "level") == 0)
-            {
-                levelButtons[i].interactable = true;
-                levelComplete[i].SetActive(true);
-            }
-            else
-            {
-                levelButtons[i].interactable = false;
-            }
-        }
-        */
     }
 
     private void SetPlayerFigure()

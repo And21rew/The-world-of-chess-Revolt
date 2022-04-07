@@ -11,4 +11,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1_PawnLevel.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/2_HorseLevel.unity
+    guid: e81332d6a506b8047a108ef14a933cf2
+  - enabled: 1
+    path: Assets/Scenes/3_BishopLevel.unity
+    guid: dd19707e2c780e24c9b0d2e715ab0dfd
+  - enabled: 1
+    path: Assets/Scenes/4_QueenLevel.unity
+    guid: c307bb2cfd2567f4eafafe3220cd4a74
+  - enabled: 1
+    path: Assets/Scenes/5_Final_KingLevel.unity
+    guid: f82cc7121cef80c4185be913eb26db92
   m_configObjects: {}
