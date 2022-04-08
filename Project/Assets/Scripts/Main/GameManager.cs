@@ -5,7 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private GameObject loseScreen;
+    [SerializeField] private GameObject loseScreen, pauseScreen;
+    [SerializeField] private GameObject pauseButton;
+
+    private bool isPause = false;
+
+    private void Start()
+    {
+        Time.timeScale = 1f;
+    }
 
     public void LoseGame()
     {
@@ -17,7 +25,22 @@ public class GameManager : MonoBehaviour
     public void BackToMenu()
     {
         Time.timeScale = 1f;
+        RecountScore();
         SceneManager.LoadScene(0);
+    }
+
+    public void ReloadLevel()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = (float) (isPause ? 1 : 0);
+        pauseScreen.SetActive(!isPause);
+        pauseButton.SetActive(isPause);
+        isPause = !isPause;
     }
 
     private void RecountScore()
