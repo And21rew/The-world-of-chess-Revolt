@@ -9,8 +9,8 @@ public class MainSound : MonoBehaviour
     [SerializeField] private Text soundSliderHandleText, musicSliderHandleText;
     [SerializeField] private AudioSource musicSource, soundSource;
 
-    private static int musicVolume;
-    private static int soundVolume;
+    private int musicVolume;
+    private int soundVolume;
 
     private void Awake()
     {

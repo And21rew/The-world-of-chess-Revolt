@@ -51,6 +51,9 @@ public class MainMenu : MonoBehaviour
 
     private void SetScore()
     {
+        ///
+        /// —чет обновить 
+        /// 
         scoreToUpdateRank = 10 * PlayerPrefs.GetInt("PlayerRank");
 
         var globalScore = PlayerPrefs.GetInt("Score");
