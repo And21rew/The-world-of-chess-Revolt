@@ -22,11 +22,17 @@ public class PlayerMove : FigureMove
 
     public override void Move()
     {
+        /*
         if (joystick.Horizontal != 0)
             _rigidbody.velocity = new Vector2(joystick.Horizontal * speed, _rigidbody.velocity.y);
 
         if (joystick.Vertical != 0)
             _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, joystick.Vertical * speed);
+
+        if (joystick.Horizontal == 0 && joystick.Vertical == 0)
+            _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _rigidbody.velocity.y);
+        */
+        _rigidbody.velocity = new Vector2(joystick.Horizontal * speed, joystick.Vertical * speed);
         /*
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
             _rigidbody.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Vertical") * speed);

@@ -81,8 +81,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 49e20bb86d544a94d95a6ba558d1204c, type: 3}
-  m_Color: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 1}
+  m_Sprite: {fileID: 21300000, guid: c3779d15acdc4664c8cf77dfaac2d492, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -105,18 +105,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00000011920929, y: -0.40260303}
+  m_Offset: {x: 0.015565038, y: 0.048787713}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6, y: 2.6}
+    oldSize: {x: 2.05, y: 3.09}
     newSize: {x: 1.6, y: 2.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0184627, y: 1.5934923}
+  m_Size: {x: 1.8797369, y: 3.0566208}
   m_EdgeRadius: 0
 --- !u!50 &4047603823048781326
 Rigidbody2D:
@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 164a566adb82cee49a50f18970283aaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joystick: {fileID: 0}
 --- !u!114 &4047603823048781323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,7 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: 1
-  speed: 3
+  speed: 5
   rank: 1
   fromSpawner: 0
   isPlayer: 1
@@ -229,8 +230,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerFigures:
-  - {fileID: 21300000, guid: 49e20bb86d544a94d95a6ba558d1204c, type: 3}
-  - {fileID: 21300000, guid: 094af3b5181e3c24297102954493f1f1, type: 3}
-  - {fileID: 21300000, guid: 684b10d2ac0b78244b77f2dcda62a563, type: 3}
-  - {fileID: 21300000, guid: f2ccfdbd0c641cc48b2107cda7d34651, type: 3}
-  - {fileID: 21300000, guid: ddf1c5d7b0612294987be28fdbe0d29d, type: 3}
+  - {fileID: 21300000, guid: c3779d15acdc4664c8cf77dfaac2d492, type: 3}
+  - {fileID: 21300000, guid: 708a58b399cfaf047ba14ced81260096, type: 3}
+  - {fileID: 21300000, guid: 7a9af1b20ebe066498dc05fe4f9b8bd0, type: 3}
+  - {fileID: 21300000, guid: 4a6d139f4bebdf4448c327bc4630ca84, type: 3}
+  - {fileID: 21300000, guid: 0953df1e75afdf04e9b013d4dd80f068, type: 3}

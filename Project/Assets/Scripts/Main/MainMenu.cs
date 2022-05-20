@@ -17,6 +17,10 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Button[] levelButtons;
     [SerializeField] private GameObject[] levelComplete;
 
+    [SerializeField] private Button[] localizationButtons;
+
+    [SerializeField] private GameObject gameOver;
+
     private int scoreToUpdateRank;
 
     private void Start()
@@ -24,11 +28,14 @@ public class MainMenu : MonoBehaviour
         SetPlayerFigure();
         SetScore();
         UpdateButtons();
+        CheckLocalization();
     }
 
     private void UpdateButtons()
     {
         var playerRank = PlayerPrefs.GetInt("PlayerRank") - 1;
+        if (playerRank >= 5)
+            playerRank = 4;
 
         for (int i = 0; i < levelButtons.Length; i++)
         {
@@ -46,6 +53,8 @@ public class MainMenu : MonoBehaviour
     private void SetPlayerFigure()
     {
         var playerRank = PlayerPrefs.GetInt("PlayerRank") - 1;
+        if (playerRank >= 5)
+            playerRank = 4;
         playerFigure.GetComponent<Image>().sprite = playerFigures[playerRank];
     }
 
@@ -54,30 +63,47 @@ public class MainMenu : MonoBehaviour
         ///
         /// —чет обновить 
         /// 
-        scoreToUpdateRank = 10 * PlayerPrefs.GetInt("PlayerRank");
+        var playerRank = PlayerPrefs.GetInt("PlayerRank");
 
-        var globalScore = PlayerPrefs.GetInt("Score");
-        scoreText.text = globalScore.ToString() + "/" + scoreToUpdateRank.ToString();
+        if (playerRank < 6)
+        {
+            scoreToUpdateRank = 10 * PlayerPrefs.GetInt("PlayerRank");
 
-        if (globalScore >= scoreToUpdateRank)
-            updateScreen.SetActive(true);
+            var globalScore = PlayerPrefs.GetInt("Score");
+            scoreText.text = globalScore.ToString() + "/" + scoreToUpdateRank.ToString();
+
+            if (globalScore >= scoreToUpdateRank)
+                updateScreen.SetActive(true);
+        }
     }
 
     public void UnlockLevel()
     {
-        var globalScore = PlayerPrefs.GetInt("Score");
-        globalScore -= scoreToUpdateRank;
-        PlayerPrefs.SetInt("Score", globalScore);
-
         var playerRank = PlayerPrefs.GetInt("PlayerRank");
-        playerRank += 1;
-        PlayerPrefs.SetInt("PlayerRank", playerRank);
 
-        SetPlayerFigure();
-        SetScore();
-        UpdateButtons();
+        if (playerRank == 5)
+        {
+            UpdateButtons();
+            playerRank += 1;
+            PlayerPrefs.SetInt("PlayerRank", playerRank);
+            gameOver.SetActive(true);
+            updateScreen.SetActive(false);
+        }
+        else
+        {
+            var globalScore = PlayerPrefs.GetInt("Score");
+            globalScore -= scoreToUpdateRank;
+            PlayerPrefs.SetInt("Score", globalScore);
 
-        updateScreen.SetActive(false);
+            playerRank += 1;
+            PlayerPrefs.SetInt("PlayerRank", playerRank);
+
+            SetPlayerFigure();
+            SetScore();
+            UpdateButtons();
+
+            updateScreen.SetActive(false);
+        }
     }
 
     public void SwitchLevelsScreen()
@@ -104,5 +130,16 @@ public class MainMenu : MonoBehaviour
     public void CloseGame()
     {
         Application.Quit();
+    }
+
+    public void CheckLocalization()
+    {
+        localizationButtons[0].interactable = PlayerPrefs.GetString("Language") != "Ru";
+        localizationButtons[1].interactable = PlayerPrefs.GetString("Language") != "Eng";
+    }
+
+    public void ResetAll()
+    {
+        PlayerPrefs.DeleteAll();
     }
 }

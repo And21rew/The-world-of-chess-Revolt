@@ -8,11 +8,13 @@ public class LocalizationManager : MonoBehaviour
     {
         string language = "Ru";
         PlayerPrefs.SetString("Language", language);
+        gameObject.GetComponent<MainMenu>().CheckLocalization();
     }
 
     public void Eng()
     {
         string language = "Eng";
         PlayerPrefs.SetString("Language", language);
+        gameObject.GetComponent<MainMenu>().CheckLocalization();
     }
 }

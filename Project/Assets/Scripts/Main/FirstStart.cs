@@ -25,5 +25,10 @@ public class FirstStart : MonoBehaviour
         {
             PlayerPrefs.SetInt("PlayerRank", 1);
         }
+
+        if (!PlayerPrefs.HasKey("Language"))
+        {
+            PlayerPrefs.SetString("Language", "Eng");
+        }
     }
 }

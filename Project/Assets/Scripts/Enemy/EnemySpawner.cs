@@ -15,6 +15,8 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField] private float timeBetweenSpawn;
 
+    private GameObject[] enemyList;
+
     private GameObject player;
 
     private int enemyRank;
@@ -22,9 +24,18 @@ public class EnemySpawner : MonoBehaviour
 
     private float playerSize;
 
+    private bool canSpawn = true;
+    private bool check = true;
+
     private void Start()
     {
         StartCoroutine(WaitAndSpawn());
+    }
+
+    private void Update()
+    {
+        if (check)
+            StartCoroutine(CheckCanSpawn());
     }
 
     private void FindPlayer()
@@ -33,14 +44,27 @@ public class EnemySpawner : MonoBehaviour
         enemyRank = SceneManager.GetActiveScene().buildIndex - 1;
     }
 
+    private IEnumerator CheckCanSpawn()
+    {
+        check = false;
+        yield return new WaitForSeconds(timeBetweenSpawn);
+        enemyList = GameObject.FindGameObjectsWithTag("Enemy");;
+        canSpawn = enemyList.Length <= 30;
+        check = true;
+    }
+
     private IEnumerator WaitAndSpawn()
     {
         while (true)
         {
             yield return new WaitForSeconds(timeBetweenSpawn);
-            FindPlayer();
-            playerSize = player.GetComponent<FigureSize>().GetSize();
-            Spawn();
+
+            if (canSpawn)
+            {
+                FindPlayer();
+                playerSize = player.GetComponent<FigureSize>().GetSize();
+                Spawn();
+            }
         }
     }
 
@@ -64,10 +88,10 @@ public class EnemySpawner : MonoBehaviour
 
     public float SelectSizeEnemy()
     {
-        var firstOption = playerSize - 0.1f;
-        var secondOption = playerSize;
-        var thirdOption = playerSize + 0.1f;
-        var fourthOption = playerSize + 0.2f;
+        var firstOption = playerSize - 0.4f;
+        var secondOption = playerSize - 0.2f;
+        var thirdOption = playerSize + 0.2f;
+        var fourthOption = playerSize + 0.4f;
 
         var variant = Random.Range(0, 4);
 

@@ -1,0 +1,29 @@
+{
+"instructions_readme": "1) Open Chrome, 2) go to chrome://tracing, 3) click Load, 4) navigate to this file.",
+"traceEvents":[
+{ "cat":"", "pid":1, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"tundra" } }
+,{ "pid":1, "tid":0, "ts":1217753068996, "dur":11723, "ph":"X", "name": "DriverCheckDagSignatures",  "args": { "durationMS":12, "detail":"" }}
+,{ "pid":1, "tid":0, "ts":1217753080720, "dur":1022, "ph":"X", "name": "DriverInitData",  "args": { "durationMS":1, "detail":"" }}
+,{ "pid":1, "tid":0, "ts":1217753081888, "dur":1, "ph":"X", "name": "Tundra",  "args": { "durationMS":0, "detail":"RemoveStaleOutputs" }}
+,{ "pid":1, "tid":0, "ts":1217753081905, "dur":1, "ph":"X", "name": "Tundra",  "args": { "durationMS":0, "detail":"PrepareNodes" }}
+,{ "pid":1, "tid":0, "ts":1217753081906, "dur":324, "ph":"X", "name": "Tundra",  "args": { "durationMS":0, "detail":"BuildQueueInit" }}
+,{ "pid":1, "tid":0, "ts":1217902937493, "dur":24437, "ph":"X", "name": "JoinBuildThread",  "args": { "durationMS":24, "detail":"" }}
+,{ "pid":1, "tid":0, "ts":1217902961948, "dur":5, "ph":"X", "name": "JoinBuildThread",  "args": { "durationMS":0, "detail":"" }}
+,{ "pid":1, "tid":0, "ts":1217902962267, "dur":4, "ph":"X", "name": "JoinBuildThread",  "args": { "durationMS":0, "detail":"" }}
+,{ "pid":1, "tid":0, "ts":1217902962285, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "durationMS":0, "detail":"" }}
+,{ "pid":1, "tid":0, "ts":1217902962301, "dur":0, "ph":"X", "name": "SharedResourceDestroy",  "args": { "durationMS":0, "detail":"" }}
+,{ "pid":1, "tid":0, "ts":1217902962308, "dur":2898, "ph":"X", "name": "Tundra",  "args": { "durationMS":3, "detail":"Write AllBuiltNodes" }}
+,{ "pid":1, "tid":1, "ts":1217753082702, "dur":206477, "ph":"X", "name": "CheckInputSignature",  "args": { "durationMS":206, "detail":"Il2Cpp C:/Users/Andrew/Documents/GitHub/The-world-of-chess-Revolt/Project/Library/Il2cppBuildCache/Android/arm64-v8a/Native/arm64-v8a/libil2cpp.so" }}
+,{ "pid":1, "tid":1, "ts":1217753291093, "dur":149646332, "ph":"X", "name": "Il2Cpp",  "args": { "durationMS":149646, "detail":"C:/Users/Andrew/Documents/GitHub/The-world-of-chess-Revolt/Project/Library/Il2cppBuildCache/Android/arm64-v8a/Native/arm64-v8a/libil2cpp.so" }}
+,{ "pid":1, "tid":1, "ts":1217902937429, "dur":3, "ph":"X", "name": "CheckInputSignature",  "args": { "durationMS":0, "detail":"all_tundra_nodes" }}
+,{ "pid":1, "tid":1, "ts":1217902937484, "dur":22, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "durationMS":0, "detail":"" }}
+,{ "pid":1, "tid":1, "ts":1217902937507, "dur":23597, "ph":"X", "name": "Exiting",  "args": { "durationMS":24, "detail":"BuildLoop" }}
+,{ "pid":1, "tid":2, "ts":1217753082698, "dur":149854806, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "durationMS":149855, "detail":"" }}
+,{ "pid":1, "tid":2, "ts":1217902937504, "dur":23777, "ph":"X", "name": "Exiting",  "args": { "durationMS":24, "detail":"BuildLoop" }}
+,{ "pid":1, "tid":3, "ts":1217753082743, "dur":149854756, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "durationMS":149855, "detail":"" }}
+,{ "pid":1, "tid":3, "ts":1217902937500, "dur":23819, "ph":"X", "name": "Exiting",  "args": { "durationMS":24, "detail":"BuildLoop" }}
+,{ "pid":1, "tid":4, "ts":1217753082807, "dur":149854686, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "durationMS":149855, "detail":"" }}
+,{ "pid":1, "tid":4, "ts":1217902937494, "dur":23872, "ph":"X", "name": "Exiting",  "args": { "durationMS":24, "detail":"BuildLoop" }}
+
+]
+}
