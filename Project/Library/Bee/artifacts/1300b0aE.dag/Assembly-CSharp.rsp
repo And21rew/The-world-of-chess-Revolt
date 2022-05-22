@@ -360,6 +360,7 @@
 "Assets/Scripts/Localization/TextLanguage.cs"
 "Assets/Scripts/Main/FirstStart.cs"
 "Assets/Scripts/Main/GameManager.cs"
+"Assets/Scripts/Main/Learning.cs"
 "Assets/Scripts/Main/MainMenu.cs"
 "Assets/Scripts/Main/Score.cs"
 "Assets/Scripts/Player/PlayerCollision.cs"

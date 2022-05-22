@@ -24,6 +24,8 @@ public class FigureManager : MonoBehaviour
         if (isPlayer)
         {
             var playerRank = PlayerPrefs.GetInt("PlayerRank");
+            if (playerRank >= 5)
+                playerRank = 4;
             rank = playerRank;
             this.gameObject.GetComponent<SpriteRenderer>().sprite = this.gameObject.GetComponent<PlayerRank>().playerFigures[playerRank - 1];
         }

@@ -30,5 +30,10 @@ public class FirstStart : MonoBehaviour
         {
             PlayerPrefs.SetString("Language", "Eng");
         }
+
+        if (!PlayerPrefs.HasKey("Learning"))
+        {
+            PlayerPrefs.SetInt("Learning", 0);
+        }
     }
 }

@@ -1,0 +1,21 @@
+Using pre-set license
+Built from '2021.1/staging' branch; Version is '2021.1.19f1 (5f5eb8bbdc25) revision 6250168'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19043.1706; Version 2009; 64bit' Language: 'ru' Physical Memory: 12270 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.1.19f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker9
+-projectPath
+C:/Users/Andrew/Documents/GitHub/The-world-of-chess-Revolt/Project
+-logFile
+Logs/AssetImportWorker9.log
+-srvPort
+53586
+Successfully changed project path to: C:/Users/Andrew/Documents/GitHub/The-world-of-chess-Revolt/Project
+C:/Users/Andrew/Documents/GitHub/The-world-of-chess-Revolt/Project
+Using Asset Import Pipeline V2.
