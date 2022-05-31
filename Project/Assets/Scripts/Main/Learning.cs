@@ -23,16 +23,19 @@ public class Learning : MonoBehaviour
 
     public void SwitchLearningScreen(int index)
     {
-        learningScreens[index - 1].SetActive(false);
-        learningScreens[index].SetActive(true);
-
         if (index == learningScreens.Length)
             EndLearning(index);
+        else
+        {
+            learningScreens[index - 1].SetActive(false);
+            learningScreens[index].SetActive(true);
+        }
     }
 
     private void EndLearning(int index)
     {
-        learningScreens[index].SetActive(false);
+        learningScreens[index - 1].SetActive(false);
+        backgroundLearning.SetActive(false);
         PlayerPrefs.SetInt("Learning", 1);
     }
 }

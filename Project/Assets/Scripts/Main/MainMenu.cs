@@ -34,8 +34,8 @@ public class MainMenu : MonoBehaviour
     private void UpdateButtons()
     {
         var playerRank = PlayerPrefs.GetInt("PlayerRank") - 1;
-        if (playerRank >= 5)
-            playerRank = 4;
+        if (playerRank > 5)
+            playerRank = 5;
 
         for (int i = 0; i < levelButtons.Length; i++)
         {
@@ -47,33 +47,42 @@ public class MainMenu : MonoBehaviour
             }
         }
 
-        levelButtons[playerRank].interactable = true;
+        if (playerRank < 5)
+            levelButtons[playerRank].interactable = true;
     }
 
     private void SetPlayerFigure()
     {
         var playerRank = PlayerPrefs.GetInt("PlayerRank") - 1;
-        if (playerRank >= 5)
+        if (playerRank > 4)
             playerRank = 4;
         playerFigure.GetComponent<Image>().sprite = playerFigures[playerRank];
     }
 
     private void SetScore()
     {
-        ///
-        /// Счет обновить 
-        /// 
         var playerRank = PlayerPrefs.GetInt("PlayerRank");
 
         if (playerRank < 6)
         {
-            scoreToUpdateRank = 10 * PlayerPrefs.GetInt("PlayerRank");
+            scoreToUpdateRank = 20 * playerRank * playerRank;
 
             var globalScore = PlayerPrefs.GetInt("Score");
             scoreText.text = globalScore.ToString() + "/" + scoreToUpdateRank.ToString();
 
             if (globalScore >= scoreToUpdateRank)
                 updateScreen.SetActive(true);
+        }
+        else
+        {
+            UpdateButtons();
+
+            var language = PlayerPrefs.GetString("Language");
+
+            if (language == "Ru")
+                scoreText.text = "Королева Королев";
+            else
+                scoreText.text = "Queen of Queens";
         }
     }
 
@@ -104,6 +113,7 @@ public class MainMenu : MonoBehaviour
 
             updateScreen.SetActive(false);
         }
+        SetScore();
     }
 
     public void SwitchLevelsScreen()
@@ -136,10 +146,20 @@ public class MainMenu : MonoBehaviour
     {
         localizationButtons[0].interactable = PlayerPrefs.GetString("Language") != "Ru";
         localizationButtons[1].interactable = PlayerPrefs.GetString("Language") != "Eng";
+        SetScore();
     }
 
     public void ResetAll()
     {
         PlayerPrefs.DeleteAll();
+    }
+
+    public void AddScore()
+    {
+        var globalScore = PlayerPrefs.GetInt("Score");
+        globalScore += 10;
+        PlayerPrefs.SetInt("Score", globalScore);
+
+        SetScore();
     }
 }

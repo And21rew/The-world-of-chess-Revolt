@@ -12,13 +12,9 @@ public class MainSound : MonoBehaviour
     private int musicVolume;
     private int soundVolume;
 
-    private void Awake()
-    {
-        GetSoundVolume();
-    }
-
     private void Start()
     {
+        GetSoundVolume();
         SetValueToSliders();
     }
 
