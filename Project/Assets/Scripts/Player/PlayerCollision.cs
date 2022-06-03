@@ -6,11 +6,14 @@ public class PlayerCollision : FigureRank
 {
     private GameManager gameManager;
     private Score score;
+    private CoinManager coinManager;
 
     private void Start()
     {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        score = GameObject.Find("Score").GetComponent<Score>();
+        GameObject mainManager = GameObject.Find("GameManager");
+        gameManager = mainManager.GetComponent<GameManager>();
+        score = mainManager.GetComponent<Score>();
+        coinManager = mainManager.GetComponent<CoinManager>();
     }
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -35,6 +38,17 @@ public class PlayerCollision : FigureRank
                 Destroy(this.gameObject);
                 gameManager.LoseGame();
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Coin"))
+        {
+            Destroy(collision.gameObject);
+
+            coinManager.RecountCoins(1);
+            coinManager.SetCountCoins();
         }
     }
 }

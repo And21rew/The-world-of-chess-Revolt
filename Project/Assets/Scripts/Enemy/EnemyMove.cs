@@ -22,7 +22,7 @@ public class EnemyMove : FigureMove
         {
             var distanceToPlayer = CalculateDistance();
 
-            if (distanceToPlayer <= 10f)
+            if (distanceToPlayer <= 12f)
             {
                 this.transform.position += speed * Time.deltaTime * (player.transform.position - this.transform.position).normalized;
             }

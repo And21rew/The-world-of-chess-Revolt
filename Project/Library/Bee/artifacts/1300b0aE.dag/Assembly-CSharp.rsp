@@ -349,6 +349,7 @@
 "Assets/Joystick Pack/Scripts/Joysticks/FloatingJoystick.cs"
 "Assets/Joystick Pack/Scripts/Joysticks/VariableJoystick.cs"
 "Assets/Scripts/Camera/CameraToTarget.cs"
+"Assets/Scripts/Coin/CoinSpawner.cs"
 "Assets/Scripts/Enemy/EnemyMove.cs"
 "Assets/Scripts/Enemy/EnemySpawner.cs"
 "Assets/Scripts/Figure/Figure.cs"
@@ -358,6 +359,7 @@
 "Assets/Scripts/Figure/FigureSize.cs"
 "Assets/Scripts/Localization/LocalizationManager.cs"
 "Assets/Scripts/Localization/TextLanguage.cs"
+"Assets/Scripts/Main/CoinManager.cs"
 "Assets/Scripts/Main/FirstStart.cs"
 "Assets/Scripts/Main/GameManager.cs"
 "Assets/Scripts/Main/Learning.cs"
@@ -367,6 +369,7 @@
 "Assets/Scripts/Player/PlayerMove.cs"
 "Assets/Scripts/Player/PlayerRank.cs"
 "Assets/Scripts/Player/PlayerSize.cs"
+"Assets/Scripts/Player/PlayerSkill.cs"
 "Assets/Scripts/Sound/GameSound.cs"
 "Assets/Scripts/Sound/MainSound.cs"
 -langversion:8.0
