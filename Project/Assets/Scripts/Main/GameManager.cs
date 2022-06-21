@@ -7,12 +7,14 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject loseScreen, pauseScreen;
     [SerializeField] private GameObject pauseButton;
+    [SerializeField] private GameObject firstSkillButton;
 
     private bool isPause = false;
 
     private void Start()
     {
         Time.timeScale = 1f;
+        firstSkillButton.SetActive(PlayerPrefs.GetInt("skill_1") == 1);
     }
 
     public void LoseGame()

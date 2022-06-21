@@ -40,5 +40,10 @@ public class FirstStart : MonoBehaviour
         {
             PlayerPrefs.SetInt("Coin", 0);
         }
+
+        if (!PlayerPrefs.HasKey("skill_1"))
+        {
+            PlayerPrefs.SetInt("skill_1", 0);
+        }
     }
 }

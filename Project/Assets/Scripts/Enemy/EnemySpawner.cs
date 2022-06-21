@@ -15,7 +15,7 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField] private float timeBetweenSpawn;
 
-    private GameObject[] enemyList;
+    //private GameObject[] enemyList;
 
     private GameObject player;
 
@@ -25,7 +25,7 @@ public class EnemySpawner : MonoBehaviour
     private float playerSize;
 
     private bool canSpawn = true;
-    private bool check = true;
+    //private bool check = true;
 
     private void Start()
     {
@@ -34,8 +34,10 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
+        /*
         if (check)
             StartCoroutine(CheckCanSpawn());
+        */
     }
 
     private void FindPlayer()
@@ -43,22 +45,21 @@ public class EnemySpawner : MonoBehaviour
         player = GameObject.Find("Player");
         enemyRank = SceneManager.GetActiveScene().buildIndex - 1;
     }
-
+    /*
     private IEnumerator CheckCanSpawn()
     {
         check = false;
-        yield return new WaitForSeconds(timeBetweenSpawn);
-        enemyList = GameObject.FindGameObjectsWithTag("Enemy");;
-        canSpawn = enemyList.Length <= 30;
+        //yield return new WaitForSeconds(timeBetweenSpawn);
+        canSpawn = CountEnemy.canSpawn;
         check = true;
     }
-
+    */
     private IEnumerator WaitAndSpawn()
     {
         while (true)
         {
             yield return new WaitForSeconds(timeBetweenSpawn);
-
+            canSpawn = CountEnemy.canSpawn;
             if (canSpawn)
             {
                 FindPlayer();

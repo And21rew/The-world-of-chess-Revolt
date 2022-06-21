@@ -48,7 +48,6 @@ public class PlayerCollision : FigureRank
             Destroy(collision.gameObject);
 
             coinManager.RecountCoins(1);
-            coinManager.SetCountCoins();
         }
     }
 }

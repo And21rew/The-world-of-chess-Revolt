@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject levelsScreen, settingsScreen;
+    [SerializeField] private GameObject[] menuScreens;
     [SerializeField] private Sprite[] playerFigures;
 
     [SerializeField] private GameObject playerFigure;
@@ -19,7 +19,13 @@ public class MainMenu : MonoBehaviour
 
     [SerializeField] private Button[] localizationButtons;
 
+    [SerializeField] private Button fisrtSkill;
+
     [SerializeField] private GameObject gameOver;
+
+    [SerializeField] private Text coinsCount;
+    [SerializeField] private GameObject firstSkillImage;
+    [SerializeField] private Sprite[] shopFill;
 
     private int scoreToUpdateRank;
 
@@ -29,6 +35,7 @@ public class MainMenu : MonoBehaviour
         SetScore();
         UpdateButtons();
         CheckLocalization();
+        SetShop();
     }
 
     private void UpdateButtons()
@@ -116,22 +123,11 @@ public class MainMenu : MonoBehaviour
         SetScore();
     }
 
-    public void SwitchLevelsScreen()
+    public void SwitchScreens(int index)
     {
-        if (levelsScreen.activeInHierarchy)
-            levelsScreen.SetActive(false);
-        else
-            levelsScreen.SetActive(true);
+        menuScreens[index].SetActive(!menuScreens[index].activeInHierarchy);
     }
-
-    public void SwitchSettingsScreen()
-    {
-        if (settingsScreen.activeInHierarchy)
-            settingsScreen.SetActive(false);
-        else
-            settingsScreen.SetActive(true);
-    }
-
+    
     public void EnterInLevel(int index)
     {
         SceneManager.LoadScene(index);
@@ -161,5 +157,21 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetInt("Score", globalScore);
 
         SetScore();
+    }
+
+    public void AddCoins()
+    {
+        var coins = PlayerPrefs.GetInt("Coin");
+        coins += 10;
+        PlayerPrefs.SetInt("Coin", coins);
+
+        SetShop();
+    }
+
+    public void SetShop()
+    {
+        firstSkillImage.GetComponent<Image>().sprite = PlayerPrefs.GetInt("skill_1") == 0 ? shopFill[0] : shopFill[1];
+        fisrtSkill.interactable = PlayerPrefs.GetInt("skill_1") == 0;
+        coinsCount.text = " " + PlayerPrefs.GetInt("Coin");
     }
 }

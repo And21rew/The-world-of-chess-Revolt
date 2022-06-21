@@ -350,6 +350,8 @@
 "Assets/Joystick Pack/Scripts/Joysticks/VariableJoystick.cs"
 "Assets/Scripts/Camera/CameraToTarget.cs"
 "Assets/Scripts/Coin/CoinSpawner.cs"
+"Assets/Scripts/Coin/MenuShop.cs"
+"Assets/Scripts/Enemy/CountEnemy.cs"
 "Assets/Scripts/Enemy/EnemyMove.cs"
 "Assets/Scripts/Enemy/EnemySpawner.cs"
 "Assets/Scripts/Figure/Figure.cs"

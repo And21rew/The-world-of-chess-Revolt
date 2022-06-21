@@ -23,5 +23,6 @@ public class CoinManager : MonoBehaviour
         var coins = PlayerPrefs.GetInt("Coin");
         coins += count;
         PlayerPrefs.SetInt("Coin", coins);
+        SetCountCoins();
     }
 }
